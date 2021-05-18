@@ -7,10 +7,13 @@ export const getGifs  = async(category) =>{
     const {data} = await resp.json();
   
     const gifs = data.map( imagen =>{
+        console.log(imagen);
         return{
             id:imagen.id,
             title:imagen.title,
-            url:imagen.images?.original.url
+            url:imagen.images?.original.url,
+            size:imagen.images?.original.size,
+            frames:imagen.images?.original.frames
         }
     })
 

@@ -16,11 +16,14 @@ export const AddCategory = ({setCategories}) => {
      }
     return (
         <form onSubmit={HandleSumbit}>
-            <input
-                type = "text"
-                value = {inputValue}
-                onChange = {HandleInputChange}
-            ></input>
+            <div className="buscador">
+            <h2>Buscador</h2>
+                <input
+                    type = "text"
+                    value = {inputValue}
+                    onChange = {HandleInputChange}
+                ></input>
+            </div>
         </form>
     )
 }
